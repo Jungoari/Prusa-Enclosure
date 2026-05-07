@@ -3,7 +3,6 @@
 This directory contains the paper version of the project.
 
 - [`Choi.J_KCC2026_260430.pdf`](Choi.J_KCC2026_260430.pdf)
-- [`Choi.J_KCC2026_260430.docx`](Choi.J_KCC2026_260430.docx)
 
 ## Title
 

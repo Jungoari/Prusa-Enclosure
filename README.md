@@ -7,7 +7,7 @@
 > Built by **Jeongwon Choi**.
 
 <p align="center">
-  <img src="docs/images/01_overall_enclosure.jpg" alt="Prusa Enclosure V1.0 overall view" width="620">
+  <img src="docs/images/01_overall_enclosure.jpg" alt="Prusa Enclosure V1.0 overall view" width="360">
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@ The research part of this project focuses on the idea that nozzle clogging chang
 
 ## System architecture
 
-<p align="center"><img src="docs/images/02_hardware_architecture.png" alt="Hardware architecture" width="620"></p>
+<p align="center"><img src="docs/images/02_hardware_architecture.png" alt="Hardware architecture" width="360"></p>
 
 ```mermaid
 flowchart TB
@@ -103,7 +103,7 @@ flowchart TB
 
 The original Prusa electronics were replaced with an **SKR Mini E3 V3.0** board. The wiring had to be re-terminated, labeled, and adapted to the new controller layout.
 
-<p align="center"><img src="docs/images/03_skr_mini_wiring.jpg" alt="SKR Mini E3 V3.0 wiring" width="520"></p>
+<p align="center"><img src="docs/images/03_skr_mini_wiring.jpg" alt="SKR Mini E3 V3.0 wiring" width="380"></p>
 
 Work included:
 
@@ -125,17 +125,17 @@ The enclosure is built as a practical experimental chamber:
 - **Upper room:** filament storage and future humidity-control area
 - **Rear / roof area:** wiring, filter path, sensor modules, and dashboard hardware
 
-<p align="center"><img src="docs/images/04_control_panel.jpg" alt="Control panel" width="520"></p>
+<p align="center"><img src="docs/images/04_control_panel.jpg" alt="Control panel" width="380"></p>
 
 ### Closed-loop filtration and sensor placement
 
 The enclosure uses a closed-loop structure. Air is circulated through a HEPA and activated carbon filter, while sensor modules compare signals before and after the filter path.
 
-<p align="center"><img src="docs/images/05_sensor_module.png" alt="Sensor module" width="520"></p>
+<p align="center"><img src="docs/images/05_sensor_module.png" alt="Sensor module" width="380"></p>
 
-<p align="center"><img src="docs/images/06_sensor_filter_chamber.jpg" alt="Sensor and filter chamber" width="520"></p>
+<p align="center"><img src="docs/images/06_sensor_filter_chamber.jpg" alt="Sensor and filter chamber" width="380"></p>
 
-<p align="center"><img src="docs/images/07_hepa_carbon_filter.jpg" alt="HEPA and activated carbon filter" width="520"></p>
+<p align="center"><img src="docs/images/07_hepa_carbon_filter.jpg" alt="HEPA and activated carbon filter" width="380"></p>
 
 Measured signals:
 
@@ -151,28 +151,27 @@ Measured signals:
 
 A Raspberry Pi is used as the host and dashboard platform. The display work is still evolving, but the direction is to make the machine show useful local state: print status, environmental values, and future warning messages.
 
-<p align="center"><img src="docs/images/08_oled_dashboard.jpg" alt="OLED dashboard" width="520"></p>
+<p align="center"><img src="docs/images/08_oled_dashboard.jpg" alt="OLED dashboard" width="380"></p>
 
 ### Camera is present, but the research is sensor-first
 
 A camera module is included for observation, but the detection concept is not camera-dependent. The research focuses on environmental and process signals that may change before a defect becomes obvious in an image.
 
-<p align="center"><img src="docs/images/09_camera_module.jpg" alt="Camera module" width="520"></p>
+<p align="center"><img src="docs/images/09_camera_module.jpg" alt="Camera module" width="380"></p>
 
 ### Mechanical debugging became part of the project
 
 The build also documents real printer debugging: toolhead rebuilds, nozzle changes, first-layer tuning, flow calibration, and failed prints.
 
-<p align="center"><img src="docs/images/10_toolhead_rebuild.jpg" alt="Toolhead rebuild" width="520"></p>
+<p align="center"><img src="docs/images/10_toolhead_rebuild.jpg" alt="Toolhead rebuild" width="380"></p>
 
-<p align="center"><img src="docs/images/11_failed_benchy.png" alt="Failed Benchy during tuning" width="520"></p>
+<p align="center"><img src="docs/images/11_failed_benchy.png" alt="Failed Benchy during tuning" width="380"></p>
 
 ## Research-backed nozzle clogging detection
 
 This repository now includes the project paper:
 
 - [`docs/paper/Choi.J_KCC2026_260430.pdf`](docs/paper/Choi.J_KCC2026_260430.pdf)
-- [`docs/paper/Choi.J_KCC2026_260430.docx`](docs/paper/Choi.J_KCC2026_260430.docx)
 
 Paper title:
 
@@ -193,11 +192,11 @@ The key idea is to look at the difference between inlet and outlet sensor values
 
 Because SGP30 TVOC readings are affected by temperature and humidity, DHT22 measurements are used for humidity-aware interpretation.
 
-<p align="center"><img src="docs/images/research/01_tvoc_diff_label_overlay.png" alt="TVOC difference and label overlay" width="620"></p>
+<p align="center"><img src="docs/images/research/01_tvoc_diff_label_overlay.png" alt="TVOC difference and label overlay" width="360"></p>
 
 A data-driven classifier uses **60-second multivariate time-series windows**. The evaluation uses a time-preserving 80:20 split.
 
-<p align="center"><img src="docs/images/research/02_sequence_window.png" alt="Example sequence window" width="620"></p>
+<p align="center"><img src="docs/images/research/02_sequence_window.png" alt="Example sequence window" width="360"></p>
 
 ### Paper results
 
@@ -213,7 +212,7 @@ A data-driven classifier uses **60-second multivariate time-series windows**. Th
 | ROC AUC | 0.975934 |
 | Early warning lead time | 472 seconds |
 
-<p align="center"><img src="docs/images/research/03_confusion_matrix.png" alt="Confusion matrix" width="460"></p>
+<p align="center"><img src="docs/images/research/03_confusion_matrix.png" alt="Confusion matrix" width="360"></p>
 
 The strongest result is the very high recall for the clogging class. The model reached the warning threshold **472 seconds before** the rule-defined clogging label transition.
 
@@ -235,9 +234,9 @@ Additional raw development logs used during repository preparation were larger t
 
 Example generated plots:
 
-<p align="center"><img src="docs/images/20_tvoc_comparison.png" alt="TVOC comparison" width="620"></p>
+<p align="center"><img src="docs/images/20_tvoc_comparison.png" alt="TVOC comparison" width="360"></p>
 
-<p align="center"><img src="docs/images/21_pm25_filter_comparison.png" alt="PM2.5 comparison" width="620"></p>
+<p align="center"><img src="docs/images/21_pm25_filter_comparison.png" alt="PM2.5 comparison" width="360"></p>
 
 ## Repository layout
 
@@ -292,7 +291,7 @@ Still in progress:
 
 The project has enough hardware and experimental depth to present as a combined mechanical, embedded, and data-analysis build.
 
-<p align="center"><img src="docs/images/12_exhibition_booth.jpg" alt="Exhibition booth" width="520"></p>
+<p align="center"><img src="docs/images/12_exhibition_booth.jpg" alt="Exhibition booth" width="380"></p>
 
 ## What I learned
 

@@ -7,7 +7,7 @@
 > 제작: **Jeongwon Choi**
 
 <p align="center">
-  <img src="docs/images/01_overall_enclosure.jpg" alt="Prusa Enclosure V1.0 전체 모습" width="620">
+  <img src="docs/images/01_overall_enclosure.jpg" alt="Prusa Enclosure V1.0 전체 모습" width="360">
 </p>
 
 <p align="center">
@@ -45,7 +45,7 @@ FDM 3D 프린팅은 보통 오랜 시간 동안 계속 진행됩니다. 노즐 �
 
 ## 시스템 구조
 
-<p align="center"><img src="docs/images/02_hardware_architecture.png" alt="하드웨어 아키텍처" width="620"></p>
+<p align="center"><img src="docs/images/02_hardware_architecture.png" alt="하드웨어 아키텍처" width="360"></p>
 
 ```mermaid
 flowchart TB
@@ -103,7 +103,7 @@ flowchart TB
 
 기존 Prusa 제어부를 **SKR Mini E3 V3.0** 보드로 교체했습니다. 커넥터와 핀 배열이 그대로 맞지 않았기 때문에 배선을 다시 압착하고, 라벨링하고, 새 보드에 맞게 정리했습니다.
 
-<p align="center"><img src="docs/images/03_skr_mini_wiring.jpg" alt="SKR Mini E3 V3.0 배선" width="520"></p>
+<p align="center"><img src="docs/images/03_skr_mini_wiring.jpg" alt="SKR Mini E3 V3.0 배선" width="380"></p>
 
 진행한 작업:
 
@@ -125,17 +125,17 @@ flowchart TB
 - **상단 공간:** 필라멘트 보관 및 향후 습도 제어 공간
 - **후면 / 상단 영역:** 배선, 필터 경로, 센서 모듈, 대시보드 하드웨어
 
-<p align="center"><img src="docs/images/04_control_panel.jpg" alt="컨트롤 패널" width="520"></p>
+<p align="center"><img src="docs/images/04_control_panel.jpg" alt="컨트롤 패널" width="380"></p>
 
 ### 폐루프 필터링과 센서 배치
 
 인클로저는 내부 공기를 반복 순환시키는 closed-loop 구조를 사용합니다. 공기는 HEPA 및 활성탄 필터를 지나며, 필터 전단과 후단에 배치한 센서 모듈이 변화를 비교합니다.
 
-<p align="center"><img src="docs/images/05_sensor_module.png" alt="센서 모듈" width="520"></p>
+<p align="center"><img src="docs/images/05_sensor_module.png" alt="센서 모듈" width="380"></p>
 
-<p align="center"><img src="docs/images/06_sensor_filter_chamber.jpg" alt="센서 및 필터 챔버" width="520"></p>
+<p align="center"><img src="docs/images/06_sensor_filter_chamber.jpg" alt="센서 및 필터 챔버" width="380"></p>
 
-<p align="center"><img src="docs/images/07_hepa_carbon_filter.jpg" alt="HEPA 및 활성탄 필터" width="520"></p>
+<p align="center"><img src="docs/images/07_hepa_carbon_filter.jpg" alt="HEPA 및 활성탄 필터" width="380"></p>
 
 측정 신호:
 
@@ -151,28 +151,27 @@ flowchart TB
 
 Raspberry Pi는 Klipper 호스트이자 대시보드 플랫폼으로 사용됩니다. 디스플레이 부분은 아직 발전 중이지만, 프린터 상태, 환경 값, 향후 경고 메시지를 기기에서 바로 확인할 수 있게 만드는 방향입니다.
 
-<p align="center"><img src="docs/images/08_oled_dashboard.jpg" alt="OLED 대시보드" width="520"></p>
+<p align="center"><img src="docs/images/08_oled_dashboard.jpg" alt="OLED 대시보드" width="380"></p>
 
 ### 카메라는 있지만, 연구의 중심은 센서입니다
 
 관찰을 위한 카메라 모듈도 장착되어 있습니다. 하지만 이 프로젝트의 감지 개념은 카메라에 의존하지 않습니다. 이미지에 결함이 보이기 전부터 변할 수 있는 환경 신호와 공정 신호를 보는 것이 핵심입니다.
 
-<p align="center"><img src="docs/images/09_camera_module.jpg" alt="카메라 모듈" width="520"></p>
+<p align="center"><img src="docs/images/09_camera_module.jpg" alt="카메라 모듈" width="380"></p>
 
 ### 기계적 디버깅도 프로젝트의 일부였습니다
 
 툴헤드 재조립, 노즐 교체, 첫 레이어 튜닝, flow 캘리브레이션, 실패한 출력물까지 모두 이 프로젝트를 구성하는 과정이었습니다.
 
-<p align="center"><img src="docs/images/10_toolhead_rebuild.jpg" alt="툴헤드 재조립" width="520"></p>
+<p align="center"><img src="docs/images/10_toolhead_rebuild.jpg" alt="툴헤드 재조립" width="380"></p>
 
-<p align="center"><img src="docs/images/11_failed_benchy.png" alt="튜닝 중 실패한 Benchy" width="520"></p>
+<p align="center"><img src="docs/images/11_failed_benchy.png" alt="튜닝 중 실패한 Benchy" width="380"></p>
 
 ## 논문 기반 노즐 막힘 감지
 
 이 레포지토리에는 프로젝트 논문 파일도 포함되어 있습니다.
 
 - [`docs/paper/Choi.J_KCC2026_260430.pdf`](docs/paper/Choi.J_KCC2026_260430.pdf)
-- [`docs/paper/Choi.J_KCC2026_260430.docx`](docs/paper/Choi.J_KCC2026_260430.docx)
 
 논문 제목:
 
@@ -193,11 +192,11 @@ Raspberry Pi는 Klipper 호스트이자 대시보드 플랫폼으로 사용됩�
 
 SGP30 TVOC 값은 온도와 습도의 영향을 받기 때문에, DHT22 측정값을 함께 사용해 습도 영향을 고려했습니다.
 
-<p align="center"><img src="docs/images/research/01_tvoc_diff_label_overlay.png" alt="TVOC 차분과 라벨 오버레이" width="620"></p>
+<p align="center"><img src="docs/images/research/01_tvoc_diff_label_overlay.png" alt="TVOC 차분과 라벨 오버레이" width="360"></p>
 
 데이터 기반 판별기는 **60초 길이의 다변량 시계열 윈도우**를 입력으로 사용합니다. 검증은 시간 순서를 유지한 80:20 분할로 수행했습니다.
 
-<p align="center"><img src="docs/images/research/02_sequence_window.png" alt="60초 시계열 윈도우 예시" width="620"></p>
+<p align="center"><img src="docs/images/research/02_sequence_window.png" alt="60초 시계열 윈도우 예시" width="360"></p>
 
 ### 논문 결과
 
@@ -213,7 +212,7 @@ SGP30 TVOC 값은 온도와 습도의 영향을 받기 때문에, DHT22 측정�
 | ROC AUC | 0.975934 |
 | 조기 경보 시간 | 472초 |
 
-<p align="center"><img src="docs/images/research/03_confusion_matrix.png" alt="Confusion matrix" width="460"></p>
+<p align="center"><img src="docs/images/research/03_confusion_matrix.png" alt="Confusion matrix" width="360"></p>
 
 가장 강한 결과는 노즐 막힘 클래스에 대한 매우 높은 recall입니다. 모델의 예측 확률은 규칙 기반 clogging 라벨 전환보다 **472초 먼저** 임계값을 넘었습니다.
 
@@ -235,9 +234,9 @@ SGP30 TVOC 값은 온도와 습도의 영향을 받기 때문에, DHT22 측정�
 
 예시 그래프:
 
-<p align="center"><img src="docs/images/20_tvoc_comparison.png" alt="TVOC 비교" width="620"></p>
+<p align="center"><img src="docs/images/20_tvoc_comparison.png" alt="TVOC 비교" width="360"></p>
 
-<p align="center"><img src="docs/images/21_pm25_filter_comparison.png" alt="PM2.5 비교" width="620"></p>
+<p align="center"><img src="docs/images/21_pm25_filter_comparison.png" alt="PM2.5 비교" width="360"></p>
 
 ## 레포지토리 구조
 
@@ -292,7 +291,7 @@ SGP30 TVOC 값은 온도와 습도의 영향을 받기 때문에, DHT22 측정�
 
 이 프로젝트는 기계 설계, 임베디드 시스템, 데이터 분석을 함께 보여줄 수 있는 프로젝트입니다.
 
-<p align="center"><img src="docs/images/12_exhibition_booth.jpg" alt="전시 부스" width="520"></p>
+<p align="center"><img src="docs/images/12_exhibition_booth.jpg" alt="전시 부스" width="380"></p>
 
 ## 배운 점
 
